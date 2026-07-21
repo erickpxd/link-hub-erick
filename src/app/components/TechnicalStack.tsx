@@ -32,7 +32,7 @@ export default function TechnicalStack() {
         {stack.map((tech) => (
           <li
             key={tech}
-            className="glass flex h-[38px] items-center rounded-[24px] px-4 font-mono text-[13px]"
+            className="glass glass-pill flex h-[38px] items-center px-4 font-mono text-[13px]"
             style={{ color: "var(--interface-color)" }}
           >
             {tech}
@@ -41,7 +41,7 @@ export default function TechnicalStack() {
         <li>
           <a
             href="#contact"
-            className="glass glass-hover flex h-[38px] items-center rounded-[24px] px-4 font-mono text-[13px]"
+            className="glass glass-pill glass-hover flex h-[38px] items-center px-4 font-mono text-[13px]"
             style={{ color: "var(--interface-color)" }}
           >
             Saiba Mais

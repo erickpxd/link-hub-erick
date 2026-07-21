@@ -38,7 +38,7 @@ export default function GlassButton({ href, icon, children, external, className 
     </span>
   );
 
-  const cls = `glass glass-hover flex h-[54px] w-full items-center rounded-[24px] px-[29px] text-white ${className}`;
+  const cls = `glass glass-pill glass-hover flex h-[54px] w-full items-center px-[29px] text-white ${className}`;
 
   if (external) {
     return (

@@ -30,7 +30,7 @@ export default function SocialLinks() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={label}
-            className="glass glass-hover flex size-12 items-center justify-center rounded-full min-[360px]:size-14"
+            className="glass glass-circular glass-hover flex size-12 items-center justify-center min-[360px]:size-14"
           >
             <span
               aria-hidden="true"
