@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# erickmontdev — Link Hub
 
-## Getting Started
+Link hub e portfólio pessoal de Erick Monteiro, Software Engineer & Web Developer.
 
-First, run the development server:
+O projeto reúne redes sociais, portfólio, projetos, contato e tecnologias em uma interface responsiva com identidade visual minimalista e dark glass.
+
+## Funcionalidades
+
+- apresentação inicial animada;
+- hero com imagem decorativa e foto de perfil;
+- atalhos para redes sociais;
+- links para portfólio, projetos e contato;
+- seção de tecnologias;
+- animações de entrada conforme o conteúdo aparece na tela;
+- layout responsivo para desktop e dispositivos móveis;
+- navegação por teclado e suporte a preferência por movimento reduzido.
+
+## Tecnologias
+
+- Next.js 16;
+- React 19;
+- TypeScript;
+- Tailwind CSS 4;
+- CSS moderno com `backdrop-filter` e fallbacks;
+- Geist e JetBrains Mono.
+
+## Executando localmente
+
+Requisitos: Node.js e npm.
 
 ```bash
+git clone git@github.com:erickpxd/link-hub-erick.git
+cd link-hub-erick
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+A aplicação ficará disponível em [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Para acessar o servidor por outro dispositivo na mesma rede:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run dev -- --hostname 0.0.0.0 --port 3002
+```
 
-## Learn More
+## Scripts
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run dev       # inicia o ambiente de desenvolvimento
+npm run lint      # executa o ESLint
+npm run build     # gera a exportação estática em out/ e dist/
+npm run build:dev # gera novamente a exportação estática
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Estrutura principal
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```text
+src/app/
+├── assets/       # imagens e ícones locais
+├── components/   # componentes reutilizáveis da interface
+├── globals.css   # tokens, glass system e animações
+├── layout.tsx    # layout, fontes e metadados
+└── page.tsx      # composição da página principal
+```
 
-## Deploy on Vercel
+## Design
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+A interface utiliza um sistema glass centralizado, com superfícies escuras semitransparentes, bordas internas discretas e blur moderado. Os estilos seguem tokens compartilhados para manter botões, chips e ícones sociais visualmente consistentes.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Build e deploy
+
+O projeto utiliza exportação estática do Next.js. Ao executar `npm run build`, o conteúdo de `out/` também é copiado para `dist/`, preservando o fluxo de publicação adotado pelo repositório.
+
+## Autor
+
+Desenvolvido por [Erick Monteiro](https://github.com/erickpxd).
