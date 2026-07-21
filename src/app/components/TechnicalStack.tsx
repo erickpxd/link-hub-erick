@@ -1,5 +1,6 @@
 import Image from "next/image";
 import terminalIcon from "../assets/Iconterminal.png";
+import RevealOnScroll from "./RevealOnScroll";
 
 const stack = [
   "Angular18",
@@ -17,37 +18,41 @@ const stack = [
 export default function TechnicalStack() {
   return (
     <section id="stack" aria-labelledby="stack-title" className="flex w-full flex-col items-center px-8 pt-[41px]">
-      <div className="mb-9 flex items-center gap-3">
-        <Image src={terminalIcon} alt="" aria-hidden="true" className="h-4 w-5" />
-        <h2
-          id="stack-title"
-          className="text-[16px] leading-5 font-normal"
-          style={{ color: "var(--interface-color)" }}
-        >
-          Technical Stack
-        </h2>
-      </div>
+      <RevealOnScroll delay={40} className="flex justify-center">
+        <div className="mb-9 flex items-center gap-3">
+          <Image src={terminalIcon} alt="" aria-hidden="true" className="h-4 w-5" />
+          <h2
+            id="stack-title"
+            className="text-[16px] leading-5 font-normal"
+            style={{ color: "var(--interface-color)" }}
+          >
+            Technical Stack
+          </h2>
+        </div>
+      </RevealOnScroll>
 
-      <ul className="flex max-w-[330px] flex-wrap justify-center gap-2.5">
-        {stack.map((tech) => (
-          <li
-            key={tech}
-            className="glass glass-pill flex h-[38px] items-center px-4 font-mono text-[13px]"
-            style={{ color: "var(--interface-color)" }}
-          >
-            {tech}
+      <RevealOnScroll delay={130} className="flex justify-center">
+        <ul className="flex max-w-[330px] flex-wrap justify-center gap-2.5">
+          {stack.map((tech) => (
+            <li
+              key={tech}
+              className="glass glass-pill flex h-[38px] items-center px-4 font-mono text-[13px]"
+              style={{ color: "var(--interface-color)" }}
+            >
+              {tech}
+            </li>
+          ))}
+          <li>
+            <a
+              href="#contact"
+              className="glass glass-pill glass-hover flex h-[38px] items-center px-4 font-mono text-[13px]"
+              style={{ color: "var(--interface-color)" }}
+            >
+              Saiba Mais
+            </a>
           </li>
-        ))}
-        <li>
-          <a
-            href="#contact"
-            className="glass glass-pill glass-hover flex h-[38px] items-center px-4 font-mono text-[13px]"
-            style={{ color: "var(--interface-color)" }}
-          >
-            Saiba Mais
-          </a>
-        </li>
-      </ul>
+        </ul>
+      </RevealOnScroll>
     </section>
   );
 }

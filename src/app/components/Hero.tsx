@@ -6,6 +6,7 @@ import heroBg from "../assets/image 3.png";
 import profile from "../assets/minhafoto.png";
 import SocialLinks from "./SocialLinks";
 import GlassButton from "./GlassButton";
+import RevealOnScroll from "./RevealOnScroll";
 
 export default function Hero() {
   return (
@@ -55,14 +56,22 @@ export default function Hero() {
 
         {/* Social */}
         <div className="mt-9 w-full px-8">
-          <SocialLinks />
+          <RevealOnScroll delay={60}>
+            <SocialLinks />
+          </RevealOnScroll>
         </div>
 
         {/* Buttons */}
-        <div className="mt-9 flex w-full flex-col gap-6 px-8">
-          <GlassButton href="#portfolio" icon={portfolioIcon}>Portfolio</GlassButton>
-          <GlassButton href="#stack" icon={projectsIcon}>Projetos</GlassButton>
-          <GlassButton href="mailto:erick@example.com" icon={emailIcon} external>Email</GlassButton>
+        <div className="mt-9 flex w-full flex-col gap-4 px-8">
+          <RevealOnScroll delay={120}>
+            <GlassButton href="#portfolio" icon={portfolioIcon}>Portfolio</GlassButton>
+          </RevealOnScroll>
+          <RevealOnScroll delay={210}>
+            <GlassButton href="#stack" icon={projectsIcon}>Projetos</GlassButton>
+          </RevealOnScroll>
+          <RevealOnScroll delay={300}>
+            <GlassButton href="mailto:erick@example.com" icon={emailIcon} external>Email</GlassButton>
+          </RevealOnScroll>
         </div>
       </div>
     </section>

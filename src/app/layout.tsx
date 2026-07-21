@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, JetBrains_Mono } from "next/font/google";
 import terminalIcon from "./assets/Iconterminal.png";
+import IntroSplash from "./components/IntroSplash";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -51,7 +52,10 @@ export default function RootLayout({
       lang="pt-BR"
       className={`${geistSans.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <IntroSplash />
+        {children}
+      </body>
     </html>
   );
 }
