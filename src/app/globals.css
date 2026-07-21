@@ -14,6 +14,7 @@
 
 html,
 body {
+  min-width: 320px;
   background: linear-gradient(180deg, #061D1B 0%, #010B0B 100%);
   background-attachment: fixed;
   color: #FFFFFF;

@@ -4,11 +4,9 @@ import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <main className="flex flex-col flex-1 items-center w-full">
-      <div className="w-full max-w-xl">
-        <Hero />
-        <TechnicalStack />
-      </div>
+    <main className="flex w-full flex-1 flex-col items-center">
+      <Hero />
+      <TechnicalStack />
       <Footer />
     </main>
   );
