@@ -43,7 +43,7 @@ export default function Hero() {
           <h1 className="text-[clamp(38px,11.65vw,48px)] leading-[1.1] font-bold tracking-[-0.04em]">
             Erick Monteiro
           </h1>
-          <p className="mt-[3px] text-[16px] leading-6 text-white/85">
+          <p className="mt-[3px] translate-y-[2px] text-[16px] leading-6 text-white/85">
             Software Engineer &amp; Web Developer
           </p>
         </div>
