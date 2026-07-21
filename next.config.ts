@@ -4,7 +4,6 @@ const nextConfig: NextConfig = {
   reactCompiler: true,
   output: "export",
   images: { unoptimized: true },
-  distDir: "dist",
 };
 
 export default nextConfig;
