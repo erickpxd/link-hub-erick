@@ -1,26 +1,53 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background: #061D1B;
+  --color-foreground: #FFFFFF;
+  --color-muted: rgba(255, 255, 255, 0.70);
+  --color-accent: #F59E0B;
+  --color-glass: rgba(30, 32, 34, 0.30);
+  --color-glass-border: rgba(255, 255, 255, 0.08);
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-mono: var(--font-jetbrains-mono);
+  --radius-glass: 24px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+html,
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(180deg, #061D1B 0%, #010B0B 100%);
+  background-attachment: fixed;
+  color: #FFFFFF;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Shared glass surface */
+@utility glass {
+  background: rgba(30, 32, 34, 0.30);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px) saturate(140%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+@utility glass-hover {
+  transition: background-color 200ms ease, border-color 200ms ease;
+}
+.glass-hover:hover {
+  background: rgba(30, 32, 34, 0.45);
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+/* Focus ring accessível */
+:where(a, button, [role="button"]):focus-visible {
+  outline: 2px solid #F59E0B;
+  outline-offset: 2px;
+  border-radius: 24px;
+}
+
+::selection {
+  background: rgba(245, 158, 11, 0.35);
+  color: #fff;
 }
