@@ -15,7 +15,7 @@ export default function GlassButton({ href, icon, children, external, className 
     <span className="grid w-full grid-cols-[22px_1fr_22px] items-center">
       <span
         aria-hidden="true"
-        className="size-[22px]"
+        className="size-[22px] -translate-y-[1px]"
         style={{
           backgroundColor: "var(--interface-color)",
           WebkitMaskImage: `url(${icon.src})`,
