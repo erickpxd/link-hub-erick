@@ -1,4 +1,3 @@
-import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import TechnicalStack from "./components/TechnicalStack";
 import Footer from "./components/Footer";
@@ -6,7 +5,6 @@ import Footer from "./components/Footer";
 export default function Home() {
   return (
     <main className="flex flex-col flex-1 items-center w-full">
-      <Navbar />
       <div className="w-full max-w-xl">
         <Hero />
         <TechnicalStack />
