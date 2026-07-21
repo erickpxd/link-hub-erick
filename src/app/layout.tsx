@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, JetBrains_Mono } from "next/font/google";
+import terminalIcon from "./assets/Iconterminal.png";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -15,21 +16,25 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 const siteUrl = "https://link-hub-erick.vercel.app";
-const title = "Erick Monteiro — Software Engineer & Web Developer";
+const title = "erickmontdev — Software Engineer & Web Developer";
 const description =
-  "Portfólio de Erick Monteiro. Software Engineer & Web Developer especializado em interfaces modernas, APIs robustas e produtos web premium.";
+  "Portfólio de erickmontdev. Software Engineer & Web Developer especializado em interfaces modernas, APIs robustas e produtos web premium.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title,
   description,
+  icons: {
+    icon: [{ url: terminalIcon.src, type: "image/png", sizes: "40x32" }],
+    shortcut: [{ url: terminalIcon.src, type: "image/png" }],
+  },
   openGraph: {
     title,
     description,
     type: "website",
     locale: "pt_BR",
     url: siteUrl,
-    siteName: "Erick Monteiro",
+    siteName: "erickmontdev",
   },
   twitter: {
     card: "summary_large_image",

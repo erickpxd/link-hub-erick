@@ -34,7 +34,7 @@ export default function SocialLinks() {
           >
             <span
               aria-hidden="true"
-              className="block"
+              className="block scale-[0.857] min-[360px]:scale-100"
               style={{
                 width: iconSize,
                 height: iconSize,
