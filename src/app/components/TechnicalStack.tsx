@@ -21,7 +21,8 @@ export default function TechnicalStack() {
         <Image src={terminalIcon} alt="" aria-hidden="true" className="h-4 w-5" />
         <h2
           id="stack-title"
-          className="text-[16px] leading-5 font-normal text-white/85"
+          className="text-[16px] leading-5 font-normal"
+          style={{ color: "var(--interface-color)" }}
         >
           Technical Stack
         </h2>
@@ -31,7 +32,8 @@ export default function TechnicalStack() {
         {stack.map((tech) => (
           <li
             key={tech}
-            className="glass flex h-[38px] items-center rounded-[24px] px-4 font-mono text-[13px] text-white/75"
+            className="glass flex h-[38px] items-center rounded-[24px] px-4 font-mono text-[13px]"
+            style={{ color: "var(--interface-color)" }}
           >
             {tech}
           </li>
@@ -39,7 +41,8 @@ export default function TechnicalStack() {
         <li>
           <a
             href="#contact"
-            className="glass glass-hover flex h-[38px] items-center rounded-[24px] px-4 font-mono text-[13px] text-white/75"
+            className="glass glass-hover flex h-[38px] items-center rounded-[24px] px-4 font-mono text-[13px]"
+            style={{ color: "var(--interface-color)" }}
           >
             Saiba Mais
           </a>

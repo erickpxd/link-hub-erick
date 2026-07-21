@@ -54,7 +54,7 @@ export default function Hero() {
         </div>
 
         {/* Social */}
-        <div className="mt-9 px-4">
+        <div className="mt-9 w-full px-8">
           <SocialLinks />
         </div>
 

@@ -1,4 +1,4 @@
-import Image, { type StaticImageData } from "next/image";
+import type { StaticImageData } from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 
@@ -13,8 +13,27 @@ type Props = {
 export default function GlassButton({ href, icon, children, external, className = "" }: Props) {
   const content = (
     <span className="grid w-full grid-cols-[22px_1fr_22px] items-center">
-      <Image src={icon} alt="" aria-hidden="true" className="h-auto w-[22px]" />
-      <span className="text-center text-[16px] font-normal text-white/70">{children}</span>
+      <span
+        aria-hidden="true"
+        className="size-[22px]"
+        style={{
+          backgroundColor: "var(--interface-color)",
+          WebkitMaskImage: `url(${icon.src})`,
+          maskImage: `url(${icon.src})`,
+          WebkitMaskPosition: "center",
+          maskPosition: "center",
+          WebkitMaskRepeat: "no-repeat",
+          maskRepeat: "no-repeat",
+          WebkitMaskSize: "contain",
+          maskSize: "contain",
+        }}
+      />
+      <span
+        className="text-center text-[16px] font-normal"
+        style={{ color: "var(--interface-color)" }}
+      >
+        {children}
+      </span>
       <span aria-hidden="true" />
     </span>
   );
